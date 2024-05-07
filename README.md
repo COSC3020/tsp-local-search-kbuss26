@@ -67,5 +67,4 @@ with the matrix size without losing too much accuracy.
 
 As for memory complexity, this implementation only keeps track of the current distance array
 along with constant factors, like $i$ , $k$ , and the previously selected element and along
-the original array passed to it. Therefore, the worst memory complexity exists as $M(n) \in \Theta(|V|^2)$
-for the original array.
+the original array passed to it. Therefore, the worst memory complexity exists as $M(n) \in \Theta(|V|)$.
