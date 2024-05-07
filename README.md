@@ -51,3 +51,21 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+### Response
+
+When looking at my algorithm, the worst-case asymptotic time complexity is in the
+general case - $T(n) \in \Theta(|V|^5)$ . Now, I know what this might imply - Wow! This
+is a polynomial runtime?? Did I solve the million dollar question???
+
+Short answer: No. At the cost of high accuracy, my local-search
+takes a random generation of order ( $\Theta(|V|)$ ), swaps i and a randomly selected element, and checks
+to see if the solution is less than the currently stored value. This occurs $|V|^4$ times,
+and the nested sum computation is $\Theta(|V|)$ time, which suggests that the 
+overall time complexity is $T(n) \in \Theta(|V|^5)$. This helps with sizing possible solutions
+with the matrix size without losing too much accuracy.
+
+As for memory complexity, this implementation only keeps track of the current distance array
+along with constant factors, like $i$ , $k$ , and the previously selected element and along
+the original array passed to it. Therefore, the worst memory complexity exists as $M(n) \in \Theta(|V|^2)$
+for the original array.
